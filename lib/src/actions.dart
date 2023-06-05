@@ -6,7 +6,7 @@ import 'slidable.dart';
 typedef SlidableActionCallback = void Function(BuildContext context);
 
 const int _kFlex = 1;
-const Color _kBackgroundColor = Colors.white;
+const Color _kBackgroundColor = Colors.green;
 const bool _kAutoClose = true;
 
 /// Represents an action of an [ActionPane].
