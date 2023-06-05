@@ -106,12 +106,22 @@ class CustomSlidableAction extends StatelessWidget {
             side: BorderSide.none,
           ),
           child: Ink(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Colors.red, Colors.green],
-                ),
+            width: double.infinity,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+                colors: [
+                  Color.fromRGBO(58, 23, 114, 1),
+                  Color.fromRGBO(205, 26, 112, 1),
+                ],
               ),
-              child: child),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16),
+              child: child,
+            ),
+          ),
         ),
       ),
     );
@@ -201,9 +211,16 @@ class SlidableAction extends StatelessWidget {
       }
 
       children.add(
-        Text(
-          label!,
-          overflow: TextOverflow.ellipsis,
+        Center(
+          child: Text(
+            label!,
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(
+                fontSize: 14,
+                fontFamily: 'Inter',
+                fontWeight: FontWeight.w700,
+                height: 16 / 14),
+          ),
         ),
       );
     }
